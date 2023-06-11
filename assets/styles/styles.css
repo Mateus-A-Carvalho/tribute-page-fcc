@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=Ephesis&family=Josefin+Sans:ital,wght@1,100;1,400&family=Noto+Sans&family=Playfair+Display&display=swap');
+
+/* The font that i will use in the description is Playfair Display */
+
+
+h1 {
+    background-color: #e5e5e5;
+    font-weight:lighter;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-style: italic;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.header {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    aspect-ratio: 3/2;
+}
