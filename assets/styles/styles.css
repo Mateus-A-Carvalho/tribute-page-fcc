@@ -26,7 +26,6 @@ h1 {
 
 .bold {
     font-weight: bold;
-    
 }
 
 .header {
@@ -39,5 +38,15 @@ img {
     align-items: center;
     width: 500px;
     height: 300px;
-    aspect-ratio: 3/2;
+    /* aspect-ratio: 3/2; */
+}
+
+li.list-item {
+    color: #eee;
+    font-size: 1.8rem;
+    margin: 2rem;
+}
+
+span.bold {
+    font-weight: bold;
 }
