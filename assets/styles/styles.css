@@ -13,7 +13,7 @@ html {
 
 body {
     height: 100%;
-    background: url(/assets/images/bg1.jpg);
+    /* background: url(/assets/images/bg1.jpg); */
 }
 
 h1 {
@@ -42,9 +42,14 @@ img {
 }
 
 li.list-item {
-    color: #eee;
+    /* color: #eee; */
     font-size: 1.8rem;
     margin: 2rem;
+    color: #292929;
+}
+
+blockquote {
+    font-size: 2rem;
 }
 
 span.bold {
