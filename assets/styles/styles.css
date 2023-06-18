@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=Ephesis&family=Josefin+Sans:ital,wght@1,100;1,400&family=Noto+Sans&family=Playfair+Display&display=swap');
 
+:root {
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +47,7 @@ img {
 
 li.list-item {
     /* color: #eee; */
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin: 2rem;
     color: #292929;
 }
