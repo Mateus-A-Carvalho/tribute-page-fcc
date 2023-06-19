@@ -21,11 +21,15 @@ body {
 }
 
 h1 {
-    background-color: #e5e5e5;
     font-weight: lighter;
     font-family: 'Cinzel', serif;
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
     font-style: italic;
+    border: 7rem solid;
+    border-image-slice: 900;
+    border-image-source: url(/assets/images/border_image-01.jpg);
 }
 
 .bold {
