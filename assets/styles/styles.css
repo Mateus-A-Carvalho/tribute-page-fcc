@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=Ephesis&family=Josefin+Sans:ital,wght@1,100;1,400&family=Noto+Sans&family=Playfair+Display&display=swap');
 
-:root {
-
-}
 
 * {
     margin: 0;
@@ -24,10 +21,9 @@ h1 {
     font-weight: lighter;
     font-family: 'Cinzel', serif;
     text-align: center;
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
     font-style: italic;
-    border: 7rem solid;
+    border: 6rem solid;
     border-image-slice: 900;
     border-image-source: url(/assets/images/border_image-01.jpg);
 }
