@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Ephesis&family=Josefin+Sans:ital,wght@1,100;1,400&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Merriweather:ital,wght@0,700;0,900;1,700;1,900&family=Noto+Sans&family=Playfair+Display:ital,wght@0,400;1,400;1,600;1,900&display=swap');
 
+:root {
+    --main-bg-color: #f9f5b9;
+    --brds: .3rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,29 +16,54 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth
 }
 
 body {
     height: 100%;
     background: url(/assets/images/bg1.jpg);
     font-family: 'EB Garamond', serif;
-    font-size: 2.2rem;
 }
 
-h1 {
+.nav__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__items > a {
+    display: block;
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--brds);
+    background-color: #e3f9b9;
+    color: #292929;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h1.main-heading {
     font-family: 'Merriweather', serif;
     text-align: center;
     width: 100%;
     font-style: italic;
+    font-size: 5rem;
     color: #ffffcc;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    /* border: 6rem solid;
-    border-image-slice: 900;
-    border-image-source: url(/assets/images/border_image-01.jpg); */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top: .1rem solid #ffffcc;
+    border-bottom: .1rem solid #ffffcc;
 }
 
 h2.section__heading {
+    font-size: 4.4rem;
     text-align: center;
     margin-bottom: 5rem;
 }
@@ -48,9 +78,12 @@ span.italic {
 }
 
 li.list-item {
-    /* color: #eee; */
+    font-size: 2.2rem;
     margin: 2rem;
     color: #292929;
+    list-style-type: '✦';
+    list-style-position: outside;
+    padding-inline-start: 1rem;
 }
 
 section.biografy__section {
@@ -60,12 +93,26 @@ section.biografy__section {
     opacity: 0.85;
 }
 
+section.section-books {
+    border: .2rem solid #fff ;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+.tumbstones__description {
+    color: #fff;
+}
+
+/* DEFAUT CLASSES */
+
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
-    max-width: 95%;
+    border-radius: var(--brds);
 }
 
 blockquote {
     font-size: 2rem;
+    color: #fff;
 }
