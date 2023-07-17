@@ -87,17 +87,34 @@ li.list-item {
 }
 
 section.biografy__section {
-    background-color: #f9f5b9;
+    background-color: var(--main-bg-color);
     padding: 2.5rem;
     margin-bottom: 1.5rem;
     opacity: 0.85;
 }
 
 section.section-books {
-    border: .2rem solid #fff ;
+    background-color: var(--main-bg-color);
     padding: 2.5rem;
     margin-bottom: 1.5rem;
-    opacity: 0.85;
+    display: flex;
+    opacity: .85;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section.section-books > .books {
+    width: 15rem;
+    height: 25rem;
+    object-fit: cover;
+    border: 1px solid #000;
+    margin: 2rem;
+}
+
+.books:hover {
+    transform: scale(1.025);
+    cursor: pointer;
 }
 
 .tumbstones__description {
