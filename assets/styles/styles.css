@@ -108,13 +108,29 @@ section.section-books {
     align-items: center;
 }
 
-section.section-books > .books {
+ .container-books {
+    width: 27.5rem;
+    height: 50rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+ }
+    
+
+section.section-books .books {
     width: 25rem;
     height: 40rem;
     overflow: hidden;
     margin: 2rem;
-    border-radius: var(--brds);
-    object-fit: cover;
+    
+}
+
+.description-books {
+    width: 25rem;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
 }
 
 .books > img {
@@ -123,8 +139,9 @@ section.section-books > .books {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    margin: auto;
+    margin: 0 auto;
     object-fit: cover;
+    border-radius: var(--brds);
 }
 
 .books:hover {
