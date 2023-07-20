@@ -158,8 +158,8 @@ h3.name-book {
 
 .wrapper img:hover {
     cursor: pointer;
-    transform: scale(1.05) rotate(1deg);
-    transition: ease-in-out .4s;
+    transform: scale(1.05);
+    transition: ease-in-out .2s;
 }
 
 .tumbstones__description {
