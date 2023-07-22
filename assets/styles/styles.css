@@ -127,16 +127,21 @@ section.section-books {
 
 .book-name-wrapper {
     width: 100%;
-    padding: 1rem;
+    /* padding: 1rem; */
     margin: 0 auto;
 }
 
 h3.name-book {
+    background-color: #292929;
+    color: #fefefe;
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    padding: 1rem;
     vertical-align: center;
     font-size: 1.8rem;
+    border-bottom-left-radius: var(--brds);
+    border-bottom-right-radius: var(--brds);
 }
 
 .wrapper {
@@ -144,7 +149,8 @@ h3.name-book {
     height: 40rem;
     overflow: hidden;
     margin: 0 auto;
-    border-radius: var(--brds);
+    border-top-left-radius: var(--brds);
+    border-top-right-radius: var(--brds);
 }
 
 .wrapper img {
