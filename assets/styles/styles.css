@@ -197,15 +197,6 @@ h3.name-book {
 }
 
 
-
-/* DEFAUT CLASSES */
-
-.main-content {
-    max-width: 120rem;
-    margin: 0 auto;
-    border-radius: var(--brds);
-}
-
 blockquote {
     margin: 5rem auto;
     font-size: 2rem;
@@ -256,3 +247,18 @@ blockquote::after {
     right: 5rem;
     bottom: 3rem;
 }
+
+.footer {
+    width: 100%;
+    height: 70vh;
+    background: url(../images/footer-bg1.jpg) center center content-box no-repeat;
+}
+
+/* DEFAUT CLASSES */
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    border-radius: var(--brds);
+}
+
