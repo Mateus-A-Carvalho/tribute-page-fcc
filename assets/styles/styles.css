@@ -24,6 +24,7 @@ body {
     height: 100%;
     background: 
     url(../images/tolkien-bg/tolkien-bg01.jpg) center center no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     font-family: 'EB Garamond', serif;
 }
@@ -203,22 +204,16 @@ h3.name-book {
 blockquote {
     margin: 5rem auto;
     font-size: 2rem;
-    color: #2b2b2b;
+    background-color: #2b2b2b;
+    color: #fff;
+    border-left: 1rem solid #1e1e1e;  
     padding: 6rem;
-    border-left: 1rem solid #ccc;
-    background-color: #fff;
     font-style: italic;
     font-weight: bolder;
     font-size: 3.5rem;
     text-align: center;
     border-radius: var(--brds);
     position: relative;
-}
-
-blockquote.epitaph {
-    background-color: #2b2b2b;
-    color: #fff;
-    border-left: 1rem solid #1e1e1e;
 }
 
 blockquote.epitaph::after,
@@ -257,6 +252,27 @@ blockquote::after {
     background: url(../images/footer-bg/footer-bg05.jpg) center top no-repeat;
     background-size: 100% 100%;
     margin-top: 10rem;
+}
+
+.social-media {
+    max-width: 120rem;
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 3fr;
+    grid-template-rows: 2fr;
+    align-items: center;
+}
+
+.social-media a {
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 10rem;
+}
+
+.fa-brands {
+    color: #ffe;
 }
 
 /* DEFAUT CLASSES */
