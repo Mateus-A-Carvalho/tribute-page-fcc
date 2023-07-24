@@ -22,11 +22,23 @@ html {
 
 body {
     height: 100%;
-    background: 
-    url(../images/tolkien-bg/tolkien-bg01.jpg) center center no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     font-family: 'EB Garamond', serif;
+}
+
+.bg-img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+.tolkien-img {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+}
+
+.navbar {
+    border: 1px solid #fff;
 }
 
 .nav__list {
@@ -57,9 +69,11 @@ h1.main-heading {
     font-family: 'Merriweather', serif;
     text-align: center;
     width: 100%;
+    background-color: transparent;
     font-style: italic;
     font-size: 5rem;
     color: #ffffcc;
+    margin: 0 auto;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-top: .1rem solid #ffffcc;
@@ -281,5 +295,7 @@ blockquote::after {
     max-width: 120rem;
     margin: 0 auto;
     border-radius: var(--brds);
+    position: relative;
+    z-index: 1;
 }
 
