@@ -272,40 +272,43 @@ blockquote::after {
 .social-media {
     max-width: 120rem;
     height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
     align-items: center;
 }
 
-.social-media a {
+.social-media .fa-brands {
     display: block;
-    padding: 1rem;
-    margin: 1rem;
-    font-size: 4rem;
+    background-color: #e1e1e199;
+    font-size: 8rem;
+    width: 10rem;
+    height: 10rem;
     text-decoration: none;
-    color: #ffe;
+    margin: 0 auto;
+    text-align: center;
+    color: #2b2b2b;
+    border-radius: 50%;
 }
 
-.icon-group .icon-txt {
-    width: 0;
-    overflow: hidden;
-    display: none;
-}
-.icon-group .icon-txt:hover {
-    width: fit-content;
-    overflow: hidden;
-    transition: width 1s ease;
-    display: block;
+.social-media a {
+    text-decoration: none;
 }
 
 .fa-brands {
-    color: #ffe;
+    color: #2b2b2b;
+    font-size: 4rem;
+}
+
+.fa-brands::before {
+    vertical-align: middle;
 }
 
 .fa-brands:hover {
-    color: #ffe;
+    cursor: pointer;
 }
 
 /* DEFAUT CLASSES */
