@@ -283,16 +283,16 @@ blockquote::after {
     display: block;
     font-size: 8rem;
     text-decoration: none;
-    margin: 0 auto;
-    padding: 1.5rem;
     text-align: center;
     color: #2b2b2b;
-    border-radius: 10%;
+    
 }
 
 .fa-brands {
     color: #2b2b2b;
-    font-size: 4rem;
+    font-size: 8rem;
+    border-radius: 10%;
+    padding: 1.5rem;
 }
 
 .fa-brands:hover {
