@@ -38,8 +38,12 @@ body {
     border: none;
 }
 
-.navbar {
+nav.navbar {
     border: 1px solid #fff;
+    padding: 5rem;
+    margin: 3rem auto;
+    background:  url(../images/footer-bg/footer-bg01.jpg) bottom center no-repeat;
+    background-size: cover;
 }
 
 .nav__list {
