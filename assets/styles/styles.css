@@ -39,10 +39,10 @@ body {
 }
 
 nav.navbar {
-    border: 1px solid #fff;
-    padding: 5rem;
-    margin: 3rem auto;
-    background:  url(../images/footer-bg/footer-bg01.jpg) bottom center no-repeat;
+    padding: 10rem;
+    margin: 0 auto;
+    margin-top: 100vh;
+    background:  url(../images/footer-bg/footer-bg01.jpg) 75% 100% no-repeat;
     background-size: cover;
 }
 
@@ -79,10 +79,8 @@ h1.main-heading {
     font-size: 5rem;
     color: #ffffcc;
     margin: 0 auto;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-top: .1rem solid #ffffcc;
-    border-bottom: .1rem solid #ffffcc;
+    position: relative;
+    top: 40%;
 }
 
 h2.section__heading {
