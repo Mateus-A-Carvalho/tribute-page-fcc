@@ -149,16 +149,37 @@ h1.main-heading {
     background-color: #000;
     color: #ffffcc;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 5rem;
     position: absolute;
     top: 40%;
-    /* right: 15%; */
+}
+
+h1.main-heading::after,
+h1.main-heading::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h2.section__heading {
     font-size: 4.4rem;
     text-align: center;
     margin-bottom: 5rem;
+}
+
+h2.section__heading::after,
+h2.section__heading::before {
+    content: "";
+    display: block;
+    background-color: #2b2b2b;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 span.bold,
@@ -182,6 +203,7 @@ li.list-item {
 section.biografy__section {
     background-color: var(--main-bg-color);
     padding: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 1.5rem;
     opacity: 0.85;
 }
