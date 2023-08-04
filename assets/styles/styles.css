@@ -142,6 +142,10 @@ nav.navbar {
 div.dropdown{
     text-align: center;
     position: relative;
+    display: inline-block;
+    flex-grow: 1;
+    margin: 0 1rem;
+    /* padding: 0 2rem; */
 }
 
 div.dropdown__content {
@@ -153,7 +157,11 @@ div.dropdown__content {
 
 div.dropdown:hover .dropdown__content {
     display: block;
+    width: 100%;
+    overflow: auto;
     transform: scale(1, 1);
+    background-color: #343333;
+    margin-top: 0;
 }
 
 
