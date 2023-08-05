@@ -9,6 +9,7 @@
     --brds: .3rem;
     --nav-bar-bgc: #000;
     /* --nav-bar-bgc: #034030; */
+    --dropdown-bg-hover: #1a1a1a; 
 }
 
 * {
@@ -135,6 +136,14 @@ nav.navbar {
     text-decoration: none;
 }
 
+.nav__items > a.works {
+    margin-right: 20rem;
+}
+
+.nav__items > a.contact-me {
+    margin-left: 20rem;
+}
+
 .nav__items > a:hover {
     background-color: #e3f9b9;
     color: var(--main-black-color);
@@ -145,6 +154,15 @@ nav.navbar {
 li.dropdown-toogle > a#dropdown-toogle {
     padding-bottom: 1rem;
     margin-bottom: 0;
+    position: relative;
+}
+
+li.dropdown-toogle > a#dropdown-toogle::after {
+    content: "🢓";
+    font-size: 1.5em;
+    position: absolute;
+    right: 20rem;
+    top: 1.5rem;
 }
 
 div.dropdown{
@@ -153,7 +171,6 @@ div.dropdown{
     display: inline-block;
     flex-grow: 1;
     margin: 0 1rem;
-    padding: 0 20rem;
 }
 
 div.dropdown__content {
@@ -163,18 +180,21 @@ div.dropdown__content {
     position: absolute;
 }
 
-div.dropdown:hover li.dropdown-toogle {
-    background-color: #034030;
-}
-
 div.dropdown:hover .dropdown__content {
     display: block;
-    max-width: calc(100% - 40rem);
+    max-width: 100%;
     overflow: auto;
     transform: scale(1, 1);
-    background-color: #034030;
+    background-color: var(--nav-bar-bgc);
     text-align: center;
 }
+
+a.dropdown__items:hover {
+    border-radius: 0;
+    /* color: #e3f9b9;   
+    background-color: var(--dropdown-bg-hover); */
+}
+
 /* DROPDOWN FUNCTIONALITIES */
 
 h1.main-heading {
