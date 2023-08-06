@@ -235,11 +235,11 @@ h1.main__heading-books {
     position: absolute;
     top: 30%;
     -webkit-animation:
-         tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
-         tracking-out-contract 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 5s both;
+         tracking-in-expand 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
+         text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
     animation: 
-        tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
-        tracking-out-contract 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 5s both;
+        tracking-in-expand 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
+        text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
 }
 
 h1.main-heading::after,
@@ -315,12 +315,14 @@ section.biografy__section {
 section.section-books {
     background-color: var(--main-bg-color);
     padding: 2.5rem;
-    margin-top: 100vh;
+    margin-top: 7rem;
     margin-bottom: 1.5rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 8s both;
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 8s both;
 }
 
 .books-wrapper{
@@ -640,24 +642,5 @@ blockquote::after {
 100% {
     opacity: 1;
 }
-}
-
-@-webkit-keyframes tracking-out-contract {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-}
-@keyframes tracking-out-contract {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
 }
 /* MAIN-HEADING-BOOKS KEY-FRAMES */
