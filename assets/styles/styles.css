@@ -8,8 +8,8 @@
     --main-bg-color: #f9f5b9ee;
     --brds: .3rem;
     --nav-bar-bgc: #000;
-    /* --nav-bar-bgc: #034030; */
     --dropdown-bg-hover: #1a1a1a; 
+    --transition: .2s ease;
 }
 
 * {
@@ -93,6 +93,7 @@ body {
 
 .slider .slide:nth-child(9) {
     background-image: url(../images/tolkien-bg/tolkien-bf-bg09.jpg);
+    background-size: contain;
     animation-delay: -16s;
 }
 
@@ -305,6 +306,49 @@ section.biografy__section {
     margin-top: 10rem;
     margin-bottom: 1.5rem;
     opacity: 0.85;
+}
+
+section.referencies {
+    background-color: var(--main-bg-color);
+    padding: 2.5rem;
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+section.referencies p {
+    font-size: 2.2rem;
+    margin: 2rem;
+    color: #292929;
+    font-weight: bold;
+}
+
+section > a.top{
+    display: block;
+    font-size: 1.8rem;
+    position: absolute;;
+    padding: .5rem;
+    text-decoration: none;
+    background-color: var(--main-black-color-opacity);
+    color: var(--main-bg-color);
+    right: 5rem;
+    bottom: 2.5rem;
+    border: .2rem solid var(--main-black-color-opacity);
+    border-radius: 2rem;
+    box-shadow: .8rem .8rem 1.6rem #8d8989;
+}
+
+section > a.top:hover {
+    color: var(--main-black-color-opacity);
+    background-color: var(--main-bg-color);
+    transition: var(--transition);
+    transform: scale(1.05);
+}
+
+section > a.top:active {
+    background: #034030;
+    color: var(--main-bg-color);
+    transform: scale(.95);
 }
 
 .heading__books {
@@ -559,7 +603,7 @@ blockquote::after {
       opacity: 1;
     }
   }
-  @keyframes text-focus-in {
+@keyframes text-focus-in {
     0% {
       -webkit-filter: blur(12px);
               filter: blur(12px);
@@ -570,7 +614,7 @@ blockquote::after {
               filter: blur(0px);
       opacity: 1;
     }
-  }
+}
 /* NAVBAR KEYFRAMES */
 
 /* MAIN-HEADING KEY-FRAMES */
@@ -619,7 +663,6 @@ blockquote::after {
             filter: blur(12px) opacity(0%);
 }
 }
-
 /* MAIN-HEADING KEY-FRAMES */
 
 /* MAIN-HEADING-BOOKS KEY-FRAMES */
