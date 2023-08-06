@@ -111,6 +111,8 @@ nav.navbar {
     margin: 0 auto;
     margin-top: 1rem;
     background-color: var(--nav-bar-bgc);
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
 }
 
 .nav__list {
@@ -211,8 +213,12 @@ h1.main-heading {
     padding: 5rem 0;
     position: absolute;
     top: 40%;
-    -webkit-animation: text-focus-in 3s ease-in-out both; 
-    animation: text-focus-in 3s ease-in-out both;
+    -webkit-animation: 
+        text-focus-in 3s ease-in-out both,
+        text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
+    animation: 
+        text-focus-in 3s ease-in-out both,
+        text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
 }
 
 h1.main__heading-books {
@@ -228,6 +234,12 @@ h1.main__heading-books {
     padding: 5rem 0;
     position: absolute;
     top: 30%;
+    -webkit-animation:
+         tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
+         tracking-out-contract 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 5s both;
+    animation: 
+        tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
+        tracking-out-contract 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 5s both;
 }
 
 h1.main-heading::after,
@@ -510,6 +522,7 @@ blockquote::after {
 
 /* KEY FRAMES */
 
+/* SLIDER KEYFRAES */
 @keyframes slider {
     0%, 7.5%, 100% {
         opacity: 1;
@@ -529,7 +542,9 @@ blockquote::after {
         z-index: -1;
     }
 }
+/* SLIDER KEYFRAES */
 
+/* NAVBAR KEYFRAMES */
 @-webkit-keyframes text-focus-in {
     0% {
       -webkit-filter: blur(12px);
@@ -554,3 +569,95 @@ blockquote::after {
       opacity: 1;
     }
   }
+/* NAVBAR KEYFRAMES */
+
+/* MAIN-HEADING KEY-FRAMES */
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+@keyframes text-focus-in {
+0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+}
+100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes text-blur-out {
+    0% {
+      -webkit-filter: blur(0.01);
+              filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+              filter: blur(12px) opacity(0%);
+    }
+  }
+@keyframes text-blur-out {
+0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+}
+100% {
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+}
+}
+
+/* MAIN-HEADING KEY-FRAMES */
+
+/* MAIN-HEADING-BOOKS KEY-FRAMES */
+@-webkit-keyframes tracking-in-expand {
+0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+}
+@keyframes tracking-in-expand {
+0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes tracking-out-contract {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+}
+@keyframes tracking-out-contract {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+}
+/* MAIN-HEADING-BOOKS KEY-FRAMES */
