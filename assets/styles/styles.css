@@ -64,6 +64,8 @@ body {
 .slider .slide:nth-child(3) {
     background-image: url(../images/tolkien-bg/tolkien-bg03.jpg);
     animation-delay: -4s;
+    /* min-height: 100vh;
+    max-height: 100%; */
 }
 
 .slider .slide:nth-child(4) {
@@ -643,6 +645,7 @@ blockquote::after {
 }
 }
 
+
 @-webkit-keyframes text-blur-out {
     0% {
       -webkit-filter: blur(0.01);
@@ -687,3 +690,28 @@ blockquote::after {
 }
 }
 /* MAIN-HEADING-BOOKS KEY-FRAMES */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+    .main-content {
+        max-width: 144rem;
+        margin: 0 auto;
+        border-radius: var(--brds);
+        position: relative;
+        z-index: 1;
+    }
+
+    section.biografy__section {
+        width: 90%;
+    }
+
+    
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) {   
+    section.biografy__section {
+        max-width: 90%;
+    }
+}   
