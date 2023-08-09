@@ -196,8 +196,6 @@ div.dropdown:hover .dropdown__content {
 
 a.dropdown__items:hover {
     border-radius: 0;
-    /* color: #e3f9b9;   
-    background-color: var(--dropdown-bg-hover); */
 }
 /* DROPDOWN FUNCTIONALITIES */
 
@@ -687,3 +685,52 @@ blockquote::after {
 }
 }
 /* MAIN-HEADING-BOOKS KEY-FRAMES */
+
+/* MEDIA QUERIES */
+
+@media (768px <= width <= 1024px) {
+    
+    body {
+        font-size: 1.5rem;
+    }
+    
+    nav .nav__list,
+    section.biografy,
+    section.tumbstones,
+    section.section-books,
+    div.social-media {
+        width: 85%;
+    }
+
+    section a.top {
+        font-size: 0.8em;
+    }
+
+    li.dropdown-toogle > a#dropdown-toogle::after {
+        content: "🢓";
+        font-size: 1.5em;
+        position: absolute;
+        right: 14rem;
+        top: 1.5rem;
+    }
+
+
+    .nav__items > a.works {
+        margin-right: 10rem;
+    }
+    
+    .nav__items > a.contact-me {
+        margin-left: 10rem;
+    }
+    
+    div.dropdown:hover .dropdown__content {
+        display: block;
+        max-width: 100%;
+        overflow: auto;
+        transform: scale(1, 1);
+        background-color: var(--nav-bar-bgc);
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
