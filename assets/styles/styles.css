@@ -687,8 +687,7 @@ blockquote::after {
 /* MAIN-HEADING-BOOKS KEY-FRAMES */
 
 /* MEDIA QUERIES */
-
-@media (769px <= width <= 1439px) {
+@media (769px <= width <= 1024px) {
     
     body {
         font-size: 1.5rem;
@@ -733,4 +732,49 @@ blockquote::after {
         padding: 1rem;
     }
 }
+/* Obs.: Change photos because they look strange */
 
+@media (425px <= width <= 769px) {
+    body {
+        font-size: 1.4rem;
+    }
+    
+    nav .nav__list,
+    section.biografy,
+    section.tumbstones,
+    section.section-books,
+    div.social-media {
+        width: 85%;
+    }
+
+    section a.top {
+        font-size: 0.8em;
+    }
+
+    ul.nav__list {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    ul.nav__list .nav__items {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    li.dropdown-toogle > a#dropdown-toogle::after {
+        content: "🢓";
+        font-size: 1.5em;
+        position: absolute;
+        right: 14rem;
+        top: 1.5rem;
+    }
+
+    .nav__items > a.works {
+        margin-right: 7rem;
+    }
+    
+    .nav__items > a.contact-me {
+        margin-left: 7rem;
+    }
+}
