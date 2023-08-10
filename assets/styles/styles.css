@@ -766,8 +766,18 @@ blockquote::after {
         content: "🢓";
         font-size: 1.5em;
         position: absolute;
-        right: 14rem;
+        right: 6rem;
         top: 1.5rem;
+    }
+
+    div.dropdown:hover .dropdown__content {
+        display: block;
+        max-width: 100%;
+        overflow: auto;
+        transform: scale(1, 1);
+        background-color: var(--nav-bar-bgc);
+        text-align: center;
+        padding: 1rem;
     }
 
     .nav__items > a.works {
@@ -776,5 +786,34 @@ blockquote::after {
     
     .nav__items > a.contact-me {
         margin-left: 7rem;
+    }
+
+    blockquote.epitaph::before {
+        left: 1rem;
+    }
+
+    blockquote::before {
+        content: '“';
+        left: 2.5rem;
+        top: 3rem;
+    }
+
+    
+    .social-media {
+        max-width: 120rem;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .social-media a {
+        display: block;
+        font-size: 8rem;
+        text-decoration: none;
+        text-align: center;
+        color: #2b2b2b;
     }
 }
