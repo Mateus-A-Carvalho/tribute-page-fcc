@@ -103,6 +103,11 @@ body {
 }
 
 /* NAVBAR CONFIGURATIONS */
+
+input {
+    display: none;
+}
+
 nav.navbar {
     position: absolute;
     z-index: 3;
@@ -828,5 +833,34 @@ blockquote::after {
 
     section.referencies {
         margin-bottom: 10rem;
+    }
+}
+
+@media (320px <= width <= 425px) {
+    body {
+        font-size: 1.4rem;
+    }
+    
+    nav .nav__list,
+    section.biografy,
+    section.tumbstones,
+    section.section-books,
+    div.social-media {
+        width: 85%;
+    }
+
+    nav.navbar {
+        display: none;
+    }
+
+    label.burger-menu {
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        width: 10rem;
+        height: 10rem;
+        top: 1rem;
+        left: 20rem;
+        z-index: 5;
     }
 }
