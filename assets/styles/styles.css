@@ -798,15 +798,20 @@ blockquote::after {
         top: 3rem;
     }
 
+    .footer {
+        margin-top: 0;
+    }
     
     .social-media {
         max-width: 120rem;
         height: 100%;
         margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+        padding: 8rem 0;
+        display: grid;
+        justify-items: center;
         align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .social-media a {
@@ -815,5 +820,13 @@ blockquote::after {
         text-decoration: none;
         text-align: center;
         color: #2b2b2b;
+    }
+
+    i.fa-brands {
+        font-size: .8em;
+    }
+
+    section.referencies {
+        margin-bottom: 10rem;
     }
 }
