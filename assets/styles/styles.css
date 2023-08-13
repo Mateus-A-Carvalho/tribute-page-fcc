@@ -10,6 +10,7 @@
     --nav-bar-bgc: #000;
     --dropdown-bg-hover: #1a1a1a; 
     --transition: .2s ease;
+    --navbar-bg-mobile: #b38f00;
 }
 
 * {
@@ -26,6 +27,7 @@ html {
 }
 
 body {
+    font-size: 1.8rem;
     height: 100%;
     font-family: 'EB Garamond', serif;
     overflow-x: hidden;
@@ -272,6 +274,7 @@ h2.section__heading {
     font-size: 4.4rem;
     text-align: center;
     margin-bottom: 5rem;
+    font-style: italic;
 }
 
 h2.section__heading::after,
@@ -840,6 +843,16 @@ blockquote::after {
     body {
         font-size: 1.4rem;
     }
+
+    h1.main-heading,
+    h1.main__heading-books {
+        font-size: 1.7em;
+    }
+
+    h2.section__heading {
+        font-size: 1.7em;
+        font-style: italic;
+    }
     
     nav .nav__list,
     section.biografy,
@@ -855,12 +868,26 @@ blockquote::after {
 
     label.burger-menu {
         display: block;
-        position: absolute;
-        background-color: #fff;
-        width: 10rem;
-        height: 10rem;
+        position: fixed;
+        border: .3rem solid #ffffff9f;
+        background-color: var(--navbar-bg-mobile);
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
         top: 1rem;
-        left: 20rem;
+        left: 21.25rem;
         z-index: 5;
+        transform: translateX(-2.5rem);
+        text-align: center;
     }
+
+    span.burger-line {
+        display: block;
+        position: absolute;
+        width: 3rem;
+        height: 0.3rem;
+        border-radius: .5rem;
+        background-color: var(--main-black-color);       
+    }
+
 }
