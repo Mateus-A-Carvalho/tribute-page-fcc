@@ -862,12 +862,13 @@ blockquote::after {
         width: 85%;
     }
 
+    /* RESPONSIVE MENU SETTINGS */
     nav.navbar {
         display: none;
     }
 
     label.burger-menu {
-        display: block;
+        display: flex;
         position: fixed;
         border: .3rem solid #ffffff9f;
         background-color: var(--navbar-bg-mobile);
@@ -878,16 +879,52 @@ blockquote::after {
         left: 21.25rem;
         z-index: 5;
         transform: translateX(-2.5rem);
-        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
-    span.burger-line {
+    span.burger-line,
+    span.burger-line::before, 
+    span.burger-line::after {
         display: block;
-        position: absolute;
         width: 3rem;
         height: 0.3rem;
         border-radius: .5rem;
         background-color: var(--main-black-color);       
+        position: relative;
     }
 
+    span.burger-line::before, 
+    span.burger-line::after  {
+        content: " ";
+        position: absolute;
+    }
+
+    span.burger-line::before {
+        bottom: .8rem;
+    }
+
+    span.burger-line::after {
+        top: .8rem;
+    }
+    /* RESPONSIVE MENU SETTINGS */
+
+    input.menu-toogle:checked + label span.burger-line::before {
+        transition: .3s ease-in-out;
+        transform: rotate(45deg);
+        top: 0;
+        /* left: -1.5rem; */
+    }    
+
+    input.menu-toogle:checked + label span.burger-line {
+        transition: .3s ease-in-out;
+        width: 0%;
+    }    
+
+    input.menu-toogle:checked + label span.burger-line::after {
+        transition: .3s ease-in-out;
+        transform: rotate(-45deg);
+        top: 0;
+        /* left: -1.5rem; */
+    }    
 }
