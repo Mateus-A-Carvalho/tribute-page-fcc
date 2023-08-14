@@ -912,18 +912,19 @@ blockquote::after {
     input.menu-toogle:checked + label span.burger-line::before {
         transition: .3s ease-in-out;
         transform: rotate(45deg);
+        transform-origin: center;
         top: 0;
         /* left: -1.5rem; */
     }    
 
     input.menu-toogle:checked + label span.burger-line {
         transition: .3s ease-in-out;
-        width: 0%;
     }    
 
     input.menu-toogle:checked + label span.burger-line::after {
         transition: .3s ease-in-out;
         transform: rotate(-45deg);
+        transform-origin: center;
         top: 0;
         /* left: -1.5rem; */
     }    
