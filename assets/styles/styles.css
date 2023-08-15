@@ -115,10 +115,6 @@ body {
 
 /* NAVBAR CONFIGURATIONS */
 
-input {
-    display: none;
-}
-
 nav.navbar {
     position: absolute;
     z-index: 3;
@@ -924,4 +920,21 @@ blockquote::after {
         outline: none;
         pointer-events: none;
     }
+
+    .burger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .burger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .burger-menu input:checked {
+        opacity: 0;
+        width: 0;
+      }
 }
