@@ -15,8 +15,9 @@
     --bar-width: 30px;
     --bar-height: 3px;
     --hamburger-gap: 10px;
-    --hamburger-margin: 20%;
+    --hamburger-margin: 17%;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --hamburger-bg-lines: #b3b300;
     --foreground: #f9f5b9ee;
     --background: #004d00;
     --animation-timing: .2s ease-in-out;
@@ -904,7 +905,7 @@ blockquote::after {
         content: '';
         width: var(--bar-width);
         height: var(--bar-height);
-        background-color: var(--foreground);
+        background-color: var(--hamburger-bg-lines);
         border-radius: 9999px;
         transform-origin: left center;
         transition:
