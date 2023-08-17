@@ -941,10 +941,48 @@ blockquote::after {
         width: 0;
       }
 
-      .burger-menu input:checked + nav.navbar {
+    .burger-wrapper:has(input.menu-toogle:checked) {
+        border: transparent;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar {
         display: block;
+        position: fixed;
+        top: 0;
         transform: scale(1, 1);        
         min-height: 100vh;
+        margin-top: 0;
+        background-color: var(--background);
+        border: .3rem solid #fff;
+        transition: var(--animation-timing);
       }
 
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list {
+        display: flex;
+        margin-top: 6rem;
+        width: 100%;
+        position: absolute;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    } 
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items,
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items a,
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items div.drowpdown {
+        margin: 0 auto;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items div.drowpdown {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items div.drowpdown div.dropdown__content > li.nav__items {
+        display: block;
+    }
 }
