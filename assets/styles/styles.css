@@ -183,7 +183,7 @@ li.dropdown-toogle > a#dropdown-toogle::after {
     top: 1.5rem;
 }
 
-div.dropdown{
+ul.dropdown{
     text-align: center;
     position: relative;
     display: inline-block;
@@ -191,14 +191,14 @@ div.dropdown{
     margin: 0 1rem;
 }
 
-div.dropdown__content {
+ul.dropdown__content {
     display: none;
     transform: scale(0, 1);
     z-index: 3;
     position: absolute;
 }
 
-div.dropdown:hover .dropdown__content {
+ul.dropdown:hover .dropdown__content {
     display: block;
     max-width: 100%;
     overflow: auto;
@@ -736,7 +736,7 @@ blockquote::after {
         margin-left: 10rem;
     }
     
-    div.dropdown:hover .dropdown__content {
+    ul.dropdown:hover .dropdown__content {
         display: block;
         max-width: 100%;
         overflow: auto;
@@ -885,8 +885,8 @@ blockquote::after {
         left: 21.25rem;
         z-index: 5;
         transform: translateX(-2.5rem);
-        -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
-        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+        /* -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both; */
     }
 
     label.burger-menu {
@@ -945,6 +945,7 @@ blockquote::after {
         border: transparent;
     }
 
+    /* NAVBAR SETTINGS */
     .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar {
         display: block;
         position: fixed;
@@ -957,9 +958,13 @@ blockquote::after {
         transition: var(--animation-timing);
       }
 
+      li.dropdown-toogle > a#dropdown-toogle::after {
+        display: none;
+      }
+      
     .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list {
         display: flex;
-        margin-top: 6rem;
+        margin-top: 4rem;
         width: 100%;
         position: absolute;
         flex-flow: column nowrap;
@@ -970,19 +975,27 @@ blockquote::after {
 
     .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items,
     .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items a,
-    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items div.drowpdown {
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list ul.dropdown ul.dropdown__content li.nav__items a,
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items ul.dropdown {
+        display: block;
         margin: 0 auto;
+        width: 100%;
     }
 
-    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items div.drowpdown {
+    .burger-wrapper:has(input.menu-toogle:checked) + nav.navbar ul.nav__list li.nav__items ul.dropdown {
         display: flex;
+        width: 100%;
         flex-flow: column nowrap;
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
     }
 
-    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items div.drowpdown div.dropdown__content > li.nav__items {
-        display: block;
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar  ul.nav__list  ul.dropdown ul.dropdown__content {
+        display: flex;
+        transform: scale(1, 1);
+        flex-flow: column nowrap;
+        width: 100%;
     }
+    /* NAVBAR SETTINGS */
 }
