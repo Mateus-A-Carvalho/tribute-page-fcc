@@ -912,10 +912,29 @@ blockquote::after {
         padding: 2rem;
     }
 
-    section.tumbstones blockquote.epitath {
-        font-size: 1rem;
+    section.tumbstones blockquote.epitaph {
+        font-size: 1.2em;
     }
-    
+
+    .tumbstones__description {
+        font-size: 1.7em;
+    }
+
+    blockquote::after,
+    blockquote::before {
+        font-size: 2em;
+        color: #fff;
+    }
+
+    blockquote::before {
+        top: .5rem;
+        left: .1rem;
+    }
+
+    blockquote::after {
+        bottom: -1rem;
+        right: .5rem;
+    }
     
     /* RESPONSIVE MENU SETTINGS */
     nav.navbar {
