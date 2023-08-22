@@ -10,7 +10,7 @@
     --nav-bar-bgc: #000;
     --dropdown-bg-hover: #1a1a1a; 
     --transition: .2s ease;
-    --navbar-bg-mobile: #004d00;
+    --navbar-bg-mobile: #1b7443;
     /* Hamburger variables settings */
     --bar-width: 30px;
     --bar-height: 3px;
@@ -914,6 +914,11 @@ blockquote::after {
 
     section.tumbstones blockquote.epitaph {
         font-size: 1.2em;
+        padding: 3rem;
+    }
+
+    section.referencies p {
+        font-size: 1.1em;
     }
 
     .tumbstones__description {
@@ -934,6 +939,40 @@ blockquote::after {
     blockquote::after {
         bottom: -1rem;
         right: .5rem;
+    }
+
+    blockquote.epitaph::after,
+    blockquote.epitaph::before {
+        font-size: 2em;
+        color: #fff;
+    }
+
+    blockquote.epitaph::before {
+        top: 2rem;
+        left: 1rem;
+    }
+
+    blockquote.epitaph::after {
+        bottom: .5rem;
+        right: .5rem;
+    }
+
+    .tumbstone-img > img {
+        min-width: 100%;
+        min-height: max-content;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        object-fit: contain;
+        border-radius: var(--brds);
+    }
+
+    .tumbstone-img {
+        width: 100%;
+        height: max-content;
+        margin: 0 auto;
+        overflow: hidden;
     }
     
     /* RESPONSIVE MENU SETTINGS */
@@ -1023,7 +1062,7 @@ blockquote::after {
         transform: scale(1, 1);        
         min-height: 100vh;
         margin-top: 0;
-        background-color: var(--background);
+        background-color: var(--navbar-bg-mobile);
         border: .3rem solid #fff;
         transition: var(--animation-timing);
         animation: 1.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
@@ -1031,7 +1070,8 @@ blockquote::after {
 
       li.dropdown-toogle > a#dropdown-toogle::after,
       section.biografy a.top,
-      section.referencies a.top {
+      section.referencies a.top,
+      section.tumbstones a.top {
         display: none;
       }
       
