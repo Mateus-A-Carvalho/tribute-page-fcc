@@ -974,6 +974,55 @@ blockquote::after {
         margin: 0 auto;
         overflow: hidden;
     }
+
+    .slider .slide:nth-child(1) {
+        background-position: center
+    }
+
+    .slider .slide:nth-child(2) {
+        background-position: left center;
+    }
+    
+    .slider .slide:nth-child(3) {
+        background-image: url(../images/tolkien-bg/tolkien-bg03.jpg);
+        animation-delay: -4s;
+    }
+    
+    .slider .slide:nth-child(4) {
+        background-image: url(../images/tolkien-bg/tolkien-bg04-family.jpg);
+        animation-delay: -6s;
+    }
+    
+    .slider .slide:nth-child(5) {
+        background-image: url(../images/tolkien-bg/tolkien-bg05-edith.jpg);
+        animation-delay: -8s;
+    }
+    
+    .slider .slide:nth-child(6) {
+        background-image: url(../images/tolkien-bg/tolkien-bg06-edith.jpg);
+        animation-delay: -10s;
+    }
+    
+    .slider .slide:nth-child(7) {
+        background-image: url(../images/tolkien-bg/tolkien-bg07.jpg);
+        animation-delay: -12s;
+    }
+    
+    .slider .slide:nth-child(8) {
+        background-image: url(../images/tolkien-bg/tolkien-bg08.jpg);
+        animation-delay: -14s;
+    }
+    
+    .slider .slide:nth-child(9) {
+        background-image: url(../images/tolkien-bg/tolkien-bf-bg09.jpg);
+        background-size: contain;
+        animation-delay: -16s;
+    }
+    
+    .slider .slide:nth-child(10) {
+        background-image: url(../images/tolkien-bg/tolkien-bg10.jpg);
+        animation-delay: -18s;
+    }
     
     /* RESPONSIVE MENU SETTINGS */
     nav.navbar {
