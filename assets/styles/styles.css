@@ -1,0 +1,1186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=Ephesis&family=Josefin+Sans:ital,wght@1,100;1,400&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Merriweather:ital,wght@0,700;0,900;1,700;1,900&family=Noto+Sans&family=Playfair+Display:ital,wght@0,400;1,400;1,600;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Ephesis&family=Josefin+Sans:ital,wght@1,100;1,400&family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Merriweather:ital,wght@0,700;0,900;1,700;1,900&family=Noto+Sans&family=Playfair+Display:ital,wght@0,400;1,400;1,600;1,900&display=swap');
+
+:root {
+    --main-black-color-opacity: #2b2b2bf1;
+    --main-black-color: #2b2b2b;
+    --main-bg-color: #f9f5b9ee;
+    --brds: .3rem;
+    --nav-bar-bgc: #000;
+    --dropdown-bg-hover: #1a1a1a; 
+    --transition: .2s ease;
+    --navbar-bg-mobile: #86BF9B;
+    /* Hamburger variables settings */
+    --bar-width: 30px;
+    --bar-height: 3px;
+    --hamburger-gap: 10px;
+    --hamburger-margin: 17%;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --hamburger-bg-lines: #b3b300;
+    --foreground: #f9f5b9ee;
+    --background: #004d00;
+    --animation-timing: .2s ease-in-out;
+    --wrapper-dimension: 5rem;
+    --translate-wrapper-dimension: translateX(-2.5rem)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    height: 100vh;
+    font-size: 62.5%;
+    scroll-behavior: smooth
+}
+
+body {
+    font-size: 1.8rem;
+    height: 100%;
+    font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
+    background: url(../images/footer-bg/footer-bg01.jpg) bottom center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    animation: slider 20s linear infinite;
+}
+
+.slider .slide:nth-child(1) {
+    background-image: url(../images/tolkien-bg/tolkien-bg01.jpg);
+    animation-delay: -0s;
+}
+
+.slider .slide:nth-child(2) {
+    background-image: url(../images/tolkien-bg/tolkien-bg02.jpg);
+    animation-delay: -2s;
+}
+
+.slider .slide:nth-child(3) {
+    background-image: url(../images/tolkien-bg/tolkien-bg03.jpg);
+    animation-delay: -4s;
+}
+
+.slider .slide:nth-child(4) {
+    background-image: url(../images/tolkien-bg/tolkien-bg04-family.jpg);
+    animation-delay: -6s;
+}
+
+.slider .slide:nth-child(5) {
+    background-image: url(../images/tolkien-bg/tolkien-bg05-edith.jpg);
+    animation-delay: -8s;
+}
+
+.slider .slide:nth-child(6) {
+    background-image: url(../images/tolkien-bg/tolkien-bg06-edith.jpg);
+    animation-delay: -10s;
+}
+
+.slider .slide:nth-child(7) {
+    background-image: url(../images/tolkien-bg/tolkien-bg07.jpg);
+    animation-delay: -12s;
+}
+
+.slider .slide:nth-child(8) {
+    background-image: url(../images/tolkien-bg/tolkien-bg08.jpg);
+    animation-delay: -14s;
+}
+
+.slider .slide:nth-child(9) {
+    background-image: url(../images/tolkien-bg/tolkien-bg01-subst.jpg);
+    background-size: contain;
+    animation-delay: -16s;
+}
+
+.slider .slide:nth-child(10) {
+    background-image: url(../images/tolkien-bg/tolkien-bg10.jpg);
+    animation-delay: -18s;
+}
+
+/* NAVBAR CONFIGURATIONS */
+
+nav.navbar {
+    position: absolute;
+    z-index: 3;
+    top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: var(--nav-bar-bgc);
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+}
+
+.nav__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__items > a {
+    display: block;
+    font-size: 2.5rem;
+    padding: .5rem;
+    margin: 1rem 0;
+    border-radius: var(--brds);
+    background-color: transparent;
+    color: #e3f9b9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav__items > a.works {
+    margin-right: 20rem;
+}
+
+.nav__items > a.contact-me {
+    margin-left: 20rem;
+}
+
+.nav__items > a:hover {
+    background-color: #e3f9b9;
+    color: var(--main-black-color);
+    transition: .2s ease;
+    position: relative;
+}
+
+.nav__items > a:hover::before{
+    content: "↠";
+}
+
+.nav__items > a:hover::after{
+    content: "↞";
+} 
+/* NAVBAR CONFIGURATIONS */
+
+/* DROPDOWN FUNCTIONALITIES */
+li.dropdown-toogle > a#dropdown-toogle {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+li.dropdown-toogle > a#dropdown-toogle::after {
+    content: "🢓";
+    font-size: 1.5em;
+    position: absolute;
+    right: 20rem;
+    top: 1.5rem;
+}
+
+li.dropdown-toogle > a#dropdown-toogle:hover::before {
+    display: none;
+}
+
+ul.dropdown{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+
+ul.dropdown__content {
+    display: none;
+    transform: scale(0, 1);
+    z-index: 3;
+    position: absolute;
+}
+
+ul.dropdown:hover .dropdown__content {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+    transform: scale(1, 1);
+    background-color: var(--nav-bar-bgc);
+    text-align: center;
+}
+
+a.dropdown__items:hover {
+    border-radius: 0;
+}
+/* DROPDOWN FUNCTIONALITIES */
+
+h1.main-heading {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    font-style: italic;
+    font-size: 5rem;
+    background-color: #000;
+    color: #ffffcc;
+    margin: 0 auto;
+    padding: 5rem 0;
+    position: absolute;
+    top: 40%;
+    -webkit-animation: 
+        text-focus-in 3s ease-in-out both,
+        text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
+    animation: 
+        text-focus-in 3s ease-in-out both,
+        text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
+}
+
+h1.main__heading-books {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    font-style: italic;
+    font-size: 5rem;
+    background-color: #000;
+    color: #ffffcc;
+    margin: 0 auto;
+    padding: 5rem 0;
+    position: absolute;
+    top: 30%;
+    -webkit-animation:
+         tracking-in-expand 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
+         text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
+    animation: 
+        tracking-in-expand 6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both,
+        text-blur-out 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
+}
+
+h1.main-heading::after,
+h1.main-heading::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1.main__heading-books::after,
+h1.main__heading-books::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2.section__heading {
+    font-size: 4.4rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-style: italic;
+}
+
+h2.section__heading::after,
+h2.section__heading::before {
+    content: "";
+    display: block;
+    background-color: #2b2b2b;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+span.bold,
+li.bold {
+    font-weight: bold;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+li.list-item {
+    font-size: 2.2rem;
+    margin: 2rem;
+    color: #292929;
+    list-style-type: '✦';
+    list-style-position: outside;
+    padding-inline-start: 1rem;
+}
+
+section.biografy__section {
+    background-color: var(--main-bg-color);
+    padding: 2.5rem;
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+section.referencies {
+    background-color: var(--main-bg-color);
+    padding: 2.5rem;
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+section.referencies p {
+    font-size: 2.2rem;
+    margin: 2rem;
+    color: #292929;
+    font-weight: bold;
+}
+
+section > a.top{
+    display: block;
+    font-size: 1.8rem;
+    position: absolute;;
+    padding: .5rem;
+    text-decoration: none;
+    background-color: var(--main-black-color-opacity);
+    color: var(--main-bg-color);
+    right: 5rem;
+    bottom: 2.5rem;
+    border: .2rem solid var(--main-black-color-opacity);
+    border-radius: 2rem;
+    box-shadow: .8rem .8rem 1.6rem #8d8989;
+}
+
+section > a.top:hover {
+    color: var(--main-black-color-opacity);
+    background-color: var(--main-bg-color);
+    transition: var(--transition);
+    transform: scale(1.05);
+}
+
+section > a.top:active {
+    background: #034030;
+    color: var(--main-bg-color);
+    transform: scale(.95);
+}
+
+.heading__books {
+    display: block;
+    width: 100%;
+}
+
+section.section-books {
+    background-color: var(--main-bg-color);
+    padding: 2.5rem;
+    margin-top: 7rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 8s both;
+    animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 8s both;
+}
+
+.books-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.container-books {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: start;
+    margin: 3rem 2rem;
+    max-width: 25rem;
+    max-height: 50rem;
+}
+
+.book-name-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h3.name-book {
+    background-color: #292929;
+    color: #fefefe;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    vertical-align: center;
+    font-size: 1.8rem;
+    border-bottom-left-radius: var(--brds);
+    border-bottom-right-radius: var(--brds);
+}
+
+.wrapper {
+    width: 25rem;
+    height: 40rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border-top-left-radius: var(--brds);
+    border-top-right-radius: var(--brds);
+}
+
+.wrapper img {
+    min-width: 25rem;
+    min-height: 40rem;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.wrapper img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: ease-in-out .2s;
+}
+
+section.tumbstones {
+    margin-top: 10rem;
+    padding: 2.5rem;
+    background-color: var(--main-bg-color);
+}
+
+.tumbstones__description {
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4.4rem;
+    margin-bottom: 5rem;
+}
+
+.tumbstones__description::before,
+.tumbstones__description::after {
+    content: "";
+    display: block;
+    background-color: #000;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tumbstone-img {
+    width: 100%;
+    height: 60rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.tumbstone-img > img {
+    min-width: 100%;
+    min-height: 60rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: var(--brds);
+}
+
+
+blockquote {
+    margin: 5rem auto;
+    background-color: #2b2b2b;
+    color: #fff;
+    border-left: 1rem solid #1e1e1e;  
+    padding: 6rem;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 3.5rem;
+    text-align: center;
+    border-radius: var(--brds);
+    position: relative;
+}
+
+blockquote.epitaph::after,
+blockquote.epitaph::before {
+    position: absolute;
+    color: #c5c5c5;
+    font-size: 8rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+blockquote::after,
+blockquote::before {
+    position: absolute;
+    color: #4d4d4d;
+    font-size: 8rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+blockquote::before {
+    content: '“';
+    left: 5rem;
+    top: 3rem;
+}
+
+blockquote::after {
+    content: '”';
+    right: 5rem;
+    bottom: 3rem;
+}
+
+.footer {
+    width: 100%;
+    height: 70vh;
+    background: url(../images/footer-bg/footer-bg06.jpg) center top no-repeat;
+    background-size: 100% 100%;
+    margin-top: 10rem;
+}
+
+.social-media {
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media a {
+    display: block;
+    font-size: 8rem;
+    text-decoration: none;
+    text-align: center;
+    color: #2b2b2b;
+    
+}
+
+.fa-brands {
+    color: #2b2b2b;
+    font-size: 8rem;
+    border-radius: 10%;
+    padding: 1.5rem;
+}
+
+.fa-brands:hover {
+    cursor: pointer;
+    background-color: #2b2b2b;
+    color: #ffe;
+    transition: ease-in-out .25s;
+}
+
+/* DEFAUT CLASSES */
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    border-radius: var(--brds);
+    position: relative;
+    z-index: 1;
+}
+
+/* KEY FRAMES */
+
+/* SLIDER KEYFRAES */
+@keyframes slider {
+    0%, 7.5%, 100% {
+        opacity: 1;
+        animation-timing-function: ease;
+        z-index: 0;
+    }
+
+    10% {
+        opacity: 0;
+        animation-timing-function: step-end;
+        z-index: 0;
+    }
+
+    97.5% {
+        opacity: 1;
+        animation-timing-function: step-end;
+        z-index: -1;
+    }
+}
+/* SLIDER KEYFRAES */
+
+/* NAVBAR KEYFRAMES */
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+/* NAVBAR KEYFRAMES */
+
+/* MAIN-HEADING KEY-FRAMES */
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+@keyframes text-focus-in {
+0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+}
+100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes text-blur-out {
+    0% {
+      -webkit-filter: blur(0.01);
+              filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+              filter: blur(12px) opacity(0%);
+    }
+  }
+@keyframes text-blur-out {
+0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+}
+100% {
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+}
+}
+/* MAIN-HEADING KEY-FRAMES */
+
+/* MAIN-HEADING-BOOKS KEY-FRAMES */
+@-webkit-keyframes tracking-in-expand {
+0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+}
+@keyframes tracking-in-expand {
+0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+}
+/* MAIN-HEADING-BOOKS KEY-FRAMES */
+
+/* BURGER-MENU MOBILE RESOLUTION KEYFRAMES */
+@keyframes circle-in-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  
+  @keyframes circle-out-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  
+  [transition-style="out:circle:center"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-center both;
+  }
+  
+/* MEDIA QUERIES */
+@media (769px <= width <= 1024px) {
+    
+    body {
+        font-size: 1.5rem;
+    }
+    
+    nav .nav__list,
+    section.biografy,
+    section.tumbstones,
+    section.section-books,
+    div.social-media {
+        width: 85%;
+    }
+
+    section a.top {
+        font-size: 0.8em;
+    }
+
+    li.dropdown-toogle > a#dropdown-toogle::after {
+        content: "🢓";
+        font-size: 1.5em;
+        position: absolute;
+        right: 14rem;
+        top: 1.5rem;
+    }
+
+
+    .nav__items > a.works {
+        margin-right: 10rem;
+    }
+    
+    .nav__items > a.contact-me {
+        margin-left: 10rem;
+    }
+    
+    ul.dropdown:hover .dropdown__content {
+        display: block;
+        max-width: 100%;
+        overflow: auto;
+        transform: scale(1, 1);
+        background-color: var(--nav-bar-bgc);
+        text-align: center;
+        padding: 1rem;
+    }
+}
+/* Obs.: Change photos because they look strange */
+
+@media (425px <= width <= 769px) {
+    body {
+        font-size: 1.4rem;
+    }
+    
+    nav .nav__list,
+    section.biografy,
+    section.tumbstones,
+    section.section-books,
+    div.social-media {
+        width: 85%;
+    }
+
+    section a.top {
+        font-size: 0.8em;
+    }
+
+    ul.nav__list {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    ul.nav__list .nav__items {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    li.dropdown-toogle > a#dropdown-toogle::after {
+        content: "🢓";
+        font-size: 1.5em;
+        position: absolute;
+        right: 6rem;
+        top: 1.5rem;
+    }
+
+    div.dropdown:hover .dropdown__content {
+        display: block;
+        max-width: 100%;
+        overflow: auto;
+        transform: scale(1, 1);
+        background-color: var(--nav-bar-bgc);
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav__items > a.works {
+        margin-right: 7rem;
+    }
+    
+    .nav__items > a.contact-me {
+        margin-left: 7rem;
+    }
+
+    blockquote.epitaph::before {
+        left: 1rem;
+    }
+
+    blockquote::before {
+        content: '“';
+        left: 2.5rem;
+        top: 3rem;
+    }
+
+    .footer {
+        margin-top: 0;
+    }
+    
+    .social-media {
+        max-width: 120rem;
+        height: 100%;
+        margin: 0 auto;
+        padding: 8rem 0;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .social-media a {
+        display: block;
+        font-size: 8rem;
+        text-decoration: none;
+        text-align: center;
+        color: #2b2b2b;
+    }
+
+    i.fa-brands {
+        font-size: .8em;
+    }
+
+    section.referencies {
+        margin-bottom: 10rem;
+    }
+}
+
+@media (320px <= width <= 425px) {
+    body {
+        font-size: 1.4rem;
+    }
+
+    h1.main-heading,
+    h1.main__heading-books {
+        font-size: 1.7em;
+    }
+
+    h2.section__heading {
+        font-size: 1.7em;
+        font-style: italic;
+    }
+    
+    nav .nav__list,
+    section.biografy,
+    section.tumbstones,
+    section.section-books,
+    div.social-media {
+        width: 85%;
+    }
+
+    section.biografy li {
+        font-size: 1.1em;
+    }
+
+    blockquote.blockquote {
+        font-size: 1.1em;
+        padding: 2rem;
+    }
+
+    section.tumbstones blockquote.epitaph {
+        font-size: 1.2em;
+        padding: 3rem;
+    }
+
+    section.referencies p {
+        font-size: 1.1em;
+    }
+
+    .tumbstones__description {
+        font-size: 1.7em;
+    }
+
+    blockquote::after,
+    blockquote::before {
+        font-size: 2em;
+        color: #fff;
+    }
+
+    blockquote::before {
+        top: .5rem;
+        left: .1rem;
+    }
+
+    blockquote::after {
+        bottom: -1rem;
+        right: .5rem;
+    }
+
+    blockquote.epitaph::after,
+    blockquote.epitaph::before {
+        font-size: 2em;
+        color: #fff;
+    }
+
+    blockquote.epitaph::before {
+        top: 2rem;
+        left: 1rem;
+    }
+
+    blockquote.epitaph::after {
+        bottom: .5rem;
+        right: .5rem;
+    }
+
+    .tumbstone-img > img {
+        min-width: 100%;
+        min-height: max-content;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        object-fit: contain;
+        border-radius: var(--brds);
+    }
+
+    .tumbstone-img {
+        width: 100%;
+        height: max-content;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    /* RESPONSIVE MENU SETTINGS */
+    nav.navbar {
+        transform: scale(0, 1);
+    }
+
+    div.burger-wrapper {
+        display: flex;
+        position: fixed;
+        border: .3rem solid #fff;
+        background-color: var(--navbar-bg-mobile);
+        border-radius: 20%;
+        width: var(--wrapper-dimension);
+        height: var(--wrapper-dimension);
+        top: 1rem;
+        left: 50%;
+        z-index: 5;
+        transform: var(--translate-wrapper-dimension);
+        -webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+    }
+
+    label.burger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+        display: flex;
+        flex-flow: column nowrap;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        cursor: pointer;
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+    }
+
+    label.burger-menu::before,
+    label.burger-menu::after,
+    label.burger-menu input.menu-toogle {
+        content: '';
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--main-bg-color);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition:
+            opacity var(--animation-timing), 
+            width var(--animation-timing),
+            rotate var(--animation-timing),
+            translate var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    label.burger-menu input.menu-toogle {
+        appearance: none;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .burger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .burger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .burger-menu input:checked {
+        opacity: 0;
+        width: 0;
+      }
+
+    .burger-wrapper:has(input.menu-toogle:checked) {
+        border: transparent;
+        background-color: transparent;
+    }
+
+    /* NAVBAR SETTINGS */
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar {
+        display: block;
+        position: fixed;
+        top: 0;
+        padding: 0;
+        transform: scale(1, 1);        
+        min-height: 100vh;
+        margin-top: 0;
+        background-color: var(--navbar-bg-mobile);
+        border: .3rem solid #fff;
+        transition: var(--animation-timing);
+        animation: 1.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+      }
+
+      li.dropdown-toogle > a#dropdown-toogle::after,
+      section.biografy a.top,
+      section.referencies a.top,
+      section.tumbstones a.top {
+        display: none;
+      }
+      
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    } 
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items,
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items a,
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list ul.dropdown ul.dropdown__content li.nav__items a,
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items ul.dropdown {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list {
+        height: 100%;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar ul.nav__list li.nav__items {
+        padding: 0.5em 1rem;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) + nav.navbar ul.nav__list ul.dropdown {
+        display: flex;
+        width: 100vw;
+        height: 40%;
+        margin: 0 auto;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        flex-grow: initial;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) + nav.navbar ul.nav__list ul.dropdown li.dropdown-toogle {
+        display: none;
+    }
+
+    .burger-wrapper:has(input.menu-toogle:checked) ~ nav.navbar  ul.nav__list  ul.dropdown ul.dropdown__content {
+        display: flex;
+        transform: scale(1, 1);
+        flex-flow: column nowrap;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* NAVBAR SETTINGS */
+    /* SLIDER MOBILE SETTINGS */
+
+    
+
+    .slider .slide:nth-child(1) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-01.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(2) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-02.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(3) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-03.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(4) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg-04.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(5) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-05.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(6) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-06.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(7) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg07.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(8) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-08.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(9) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg-09.jpg);
+        background-size: cover;
+    }
+    
+    .slider .slide:nth-child(10) {
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg10.jpg);
+        background-size: cover;
+    }
+}
+
