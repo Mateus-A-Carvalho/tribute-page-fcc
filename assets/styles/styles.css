@@ -783,7 +783,6 @@ blockquote::after {
         padding: 1rem;
     }
 }
-/* Obs.: Change photos because they look strange */
 
 @media (425px <= width <= 769px) {
     body {
@@ -1129,10 +1128,8 @@ blockquote::after {
     }
     
     /* NAVBAR SETTINGS */
+
     /* SLIDER MOBILE SETTINGS */
-
-    
-
     .slider .slide:nth-child(1) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-01.jpg);
         background-size: cover;
