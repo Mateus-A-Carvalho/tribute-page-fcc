@@ -170,7 +170,6 @@ nav.navbar {
     position: relative;
 }
 
-
 .nav__items > a:hover::before{
     content: "↠";
 }
