@@ -170,6 +170,7 @@ nav.navbar {
     position: relative;
 }
 
+
 .nav__items > a:hover::before{
     content: "↠";
 }
@@ -738,6 +739,18 @@ blockquote::after {
   }
   
 /* MEDIA QUERIES */
+@media (769px <= width <= 1440px) {
+    .nav__items > a:hover::before{
+        visibility: hidden;
+    }
+    
+    .nav__items > a:hover::after{
+        visibility: hidden
+    } 
+
+    /* To fix the pseudo-elements of .nav__items */
+}
+
 @media (769px <= width <= 1024px) {
     
     body {
@@ -904,6 +917,10 @@ blockquote::after {
         width: 85%;
     }
 
+    div.social-media {
+        padding: 10rem 0;
+    }
+
     section.biografy li {
         font-size: 1.1em;
     }
@@ -950,12 +967,12 @@ blockquote::after {
 
     blockquote.epitaph::before {
         top: 2rem;
-        left: 1rem;
+        left: -.5rem;
     }
 
     blockquote.epitaph::after {
-        bottom: .5rem;
-        right: .5rem;
+        bottom: .4rem;
+        right: 3rem;
     }
 
     .tumbstone-img > img {
