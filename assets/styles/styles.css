@@ -170,12 +170,14 @@ nav.navbar {
     position: relative;
 }
 
-.nav__items > a:hover::before{
+ul.dropdown__content > li.nav__items a.dropdown__items::before{
     content: "↠";
+    color: orangered;
 }
 
-.nav__items > a:hover::after{
+ul.dropdown__content > li.nav__items a.dropdown__items::after{
     content: "↞";
+    color: orangered;
 } 
 /* NAVBAR CONFIGURATIONS */
 
@@ -739,13 +741,6 @@ blockquote::after {
   
 /* MEDIA QUERIES */
 @media (769px <= width <= 1440px) {
-    .nav__items > a:hover::before{
-        visibility: hidden;
-    }
-    
-    .nav__items > a:hover::after{
-        visibility: hidden
-    } 
 
     /* To fix the pseudo-elements of .nav__items */
 }
