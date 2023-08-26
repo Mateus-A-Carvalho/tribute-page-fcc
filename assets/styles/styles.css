@@ -64,6 +64,7 @@ body {
     height: 100vh;
     background-size: var(--bgc-size);
     background-repeat: no-repeat;
+    background-position: center top;
     animation: slider 20s linear infinite;
 }
 
@@ -1003,7 +1004,7 @@ blockquote::after {
         display: flex;
         position: fixed;
         border: .3rem solid #fff;
-        background-color: var(--navbar-bg-mobile);
+        background-color: var(--nav-bar-bgc);
         border-radius: 20%;
         width: var(--wrapper-dimension);
         height: var(--wrapper-dimension);
@@ -1081,7 +1082,7 @@ blockquote::after {
         transform: scale(1, 1);        
         min-height: 100vh;
         margin-top: 0;
-        background-color: var(--navbar-bg-mobile);
+        background-color: var(--nav-bar-bgc);
         border: .3rem solid #fff;
         transition: var(--animation-timing);
         animation: 1.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
@@ -1150,52 +1151,43 @@ blockquote::after {
     /* SLIDER MOBILE SETTINGS */
     .slider .slide:nth-child(1) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-01.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(2) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-02.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(3) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-03.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(4) {
-        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg-04.jpg);
-        background-size: cover;
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-04.jpg);
+        /* Change thits photo */
     }
     
     .slider .slide:nth-child(5) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-05.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(6) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-06.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(7) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg07.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(8) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-08.jpg);
-        background-size: cover;
     }
     
     .slider .slide:nth-child(9) {
-        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg-09.jpg);
-        background-size: cover;
+        background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-bg-09.jpg);
+        /* Change this photo */
     }
     
     .slider .slide:nth-child(10) {
         background-image: url(../images/tolkien-bg/tolkien-mobile-bg/tolkien-edith-bg10.jpg);
-        background-size: cover;
     }
 }
-
