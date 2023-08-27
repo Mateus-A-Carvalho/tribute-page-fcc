@@ -321,6 +321,10 @@ li.bold {
     font-weight: bold;
 }
 
+span[title="Tea Club Borrovian Society"] {
+    cursor: help;
+}
+
 span.italic {
     font-style: italic;
 }
