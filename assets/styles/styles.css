@@ -321,8 +321,20 @@ li.bold {
     font-weight: bold;
 }
 
-span[title="Tea Club Borrovian Society"] {
+span.help-cursor {
     cursor: help;
+    text-decoration: underline dotted;
+    color: #005200;
+}
+
+span > a {
+    text-decoration: underline;
+    color: #034030;
+}
+
+span > a:visited {
+    text-decoration: underline;
+    color: #047d5d;
 }
 
 span.italic {
